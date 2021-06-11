@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(unique=True)),
                 ('content', models.TextField(validators=[django.core.validators.MinLengthValidator(10)])),
                 ('author', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='posts', to='blog.author')),
-                ('tag', models.ManyToManyField(to='blog.Tag')),
+                ('tags', models.ManyToManyField(to='blog.Tag')),
             ],
         ),
     ]
